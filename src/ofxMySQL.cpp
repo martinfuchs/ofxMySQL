@@ -81,8 +81,8 @@ bool ofxMySQL::getStrings(vector<string> &results, string tableName, string fiel
 {
 	//get a field
 	
-	string querystring = "SELECT " + fieldName + " FROM " + tableName + (whereCondition.length()>0 ? "WHERE " + whereCondition : "");
-	
+	string querystring = "SELECT " + fieldName + " FROM " + tableName + (whereCondition.length()>0 ? " WHERE " + whereCondition : "");
+
 	//if query failed, quit
 	//query function will report errors
 	if (!query(querystring))
